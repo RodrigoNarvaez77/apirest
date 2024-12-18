@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Básico Mejorado</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn {
+            width: 100%;
+        }
+        table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD Básico</h1>
+        
+        <!-- Formulario para agregar una nueva persona -->
+        <h2>Agregar Persona</h2>
+        <form>
+            <div class="mb-3">
+                <label for="id" class="form-label">userID:</label>
+                <input type="text" id="id" name="id" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">title:</label>
+                <input type="text" id="title" name="title" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="body" class="form-label">Body:</label>
+                <input type="text" id="body" name="body" class="form-control" required>
+            </div>
+            <button id="boton" type="button" class="btn btn-primary">Guardar</button>
+        </form>
+
+        <hr>
+
+        <!-- Formulario para actualizar una persona existente -->
+        <h2>Actualizar Persona</h2>
+        <form>
+            <div class="mb-3">
+                <p class="form-label">Ingresar ID a Modificar</p>
+                <label for="updateid" class="form-label">ID:</label>
+                <input type="text" id="updateid" class="form-control" required>
+                <button type="button" id="boton4" class="btn btn-warning mt-2">Seleccionar</button>
+            </div>
+            <div class="mb-3">
+                <label for="userID2" class="form-label">userID:</label>
+                <input type="text" id="userID2" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="title2" class="form-label">title:</label>
+                <input type="text" id="title2" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="body2" class="form-label">Body:</label>
+                <input type="text" id="body2" class="form-control" required>
+            </div>
+            <button type="button" id="boton5" class="btn btn-success">Actualizar Persona</button>
+        </form>
+
+        <hr>
+
+        <!-- Botón para eliminar una persona por ID -->
+        <h2>Eliminar Persona</h2>
+        <form id="deletePersonForm">
+            <div class="mb-3">
+                <label for="deleteId" class="form-label">ID:</label>
+                <input type="number" id="deleteId" class="form-control" required>
+            </div>
+            <button id="boton3" type="button" class="btn btn-danger">Eliminar Persona</button>
+        </form>
+
+        <hr>
+
+        <!-- Mostrar la lista de personas -->
+        <h2>Lista de Personas</h2>
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Body</th>
+                </tr>
+            </thead>
+            <tbody id="tmostrar"></tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/index.js"></script>
+    <script src="./js/index2.js"></script>
+    <script src="./js/index3.js"></script>
+    <script src="./js/index4.js"></script>
+</body>
+</html>
